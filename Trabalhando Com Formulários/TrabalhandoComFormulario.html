@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <form method="post">
+        Nome: <input type="text" name="name">
+        Idade: <input type="number" name="idade">
+        Senha: <input type="password" name="password">
+        <button type="submit">Enviar</button>
+    </form>
+    <hr>
+
+    <form action="">
+        <label>Tex</label> <input type="text"><br>
+        <label>Number</label> <input type="number" step="5" min="0" max="100"> <br>
+        <!-- step faz o número pular de quantidade em quantidade no caso de 5 em 5 -->
+        <label>Button</label> <input type="button" value="Enviar"> <br>
+        <label>Range</label> <input type="range" min="10" max="100" value="60"> <br>
+        <!-- value serve para determinar onde ele irá iniciar -->
+        <label>Color</label> <input type="color"> <br>
+        <label>E-mail</label> <input type="email"> <br>
+        <label>Url</label> <input type="url"> <br>
+        <label>Data</label> <input type="date"> <br>
+        <label>DataTime</label> <input type="datetime"> <br>
+        <label>Week só funciona no FireFox e Edge</label> <input type="week"> <br>
+        <label>CheckBox</label> <input type="checkbox"> <input type="checkbox"><br>
+        <label>Radio</label> <input type="radio" name="aceitar"><input type="radio" name="aceitar"> <br>
+        <!-- Radio só é verdadeiro ou falso diferente do CheckBox-->
+        <label>File</label> <input type="file" multiple> <br>
+    </form>
+    <hr>
+    <h1>Pizzas Formulário de pedido</h1>
+    <p>Quais opcionais você deseja?</p>
+    <form method="post">
+        <input type="checkbox" name="opcional[]" value="queijo"> + queijo<br>
+        <input type="checkbox" name="opcional[]" value="calabresa"> + calabresa<br>
+        <input type="checkbox" name="opcional[]" value="cebola"> + cebola<br>
+        <input type="checkbox" name="opcional[]" value="azeitona"> + azeitona<br>
+
+        <p>Borda Rechada?</p>
+        <input type="radio" name="borda" value="sim">Sim<br>
+        <input type="radio" name="borda" value="nao">Não<br>
+
+        <p>Bibida</p>
+        <input type="radio" name="bebida" value="suco">Suco<br>
+        <input type="radio" name="bebida" value="refrigerante">Refrigerante<br>
+        <input type="radio" name="bebida" value="agua">Água<br>
+        <input type="radio" name="bebida" value="nenhuma">Nenhuma<br>
+
+
+
+        <button type="submit">Enviar Pedido</button>
+    </form>
+
+    <hr>
+
+    <h1><strong>BUTTON E SEUS TIPOS</strong></h1>
+
+    <form method="get">
+        <LAbel>Nome</LAbel> <input type="text" name="name"> <br>
+        <label>Idade</label> <input type="number" name="idade"> <br>
+        <label>Senha</label> <input type="password" name="password"> <br>
+        <button type="reset">Limpar</button> <br>
+
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <hr>
+
+    <h1><strong>SELECT E SEUS TIPOS</strong></h1>
+   <form method="get">
+    <label>Nome</label> <input type="text" name="name"> <br>
+    <label>Cargo</label> 
+    <select name="role">
+    <option value="">Selecione o Cargo</option>
+    <option value="administrador">Administrador</option>
+    <option value="gerente ">Gerente</option>
+    <option value="diretor">Diretor</option>
+    <option value="presidente">Presidente</option>
+    </select> <br>
+    <label>Assunto</label> <input type="text" name="assunto"> <br>
+    <button type="reset">Limpar</button> <br>
+   </form>
+   
+   
+
+
+</body>
+
+</html>
