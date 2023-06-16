@@ -34,10 +34,11 @@
         <label>File</label> <input type="file" multiple> <br>
     </form>
     <hr>
-    <h1>Pizzas Formulário de pedido</h1>
+    <h1> <strong> Pizzas Formulário de pedido </strong></h1>
     <p>Quais opcionais você deseja?</p>
     <form method="post">
-        <input type="checkbox" name="opcional[]" value="queijo"> + queijo<br>
+        <input type="checkbox" name="opcional[]" value="queijo"> +
+        queijo<br><!-- utilizando o opcional[] mesmo marcando varios checkbox conseguimos transforma isso em uma lista de opcional -->
         <input type="checkbox" name="opcional[]" value="calabresa"> + calabresa<br>
         <input type="checkbox" name="opcional[]" value="cebola"> + cebola<br>
         <input type="checkbox" name="opcional[]" value="azeitona"> + azeitona<br>
@@ -74,22 +75,24 @@
     <hr>
 
     <h1><strong>SELECT E SEUS TIPOS</strong></h1>
-   <form method="get">
-    <label>Nome</label> <input type="text" name="name"> <br>
-    <label>Cargo</label> 
-    <select name="role">
-    <option value="">Selecione o Cargo</option>
-    <option value="administrador">Administrador</option>
-    <option value="gerente ">Gerente</option>
-    <option value="diretor">Diretor</option>
-    <option value="presidente">Presidente</option>
-    </select> <br>
-    <label>Assunto</label> <input type="text" name="assunto"> <br>
-    <button type="reset">Limpar</button> <br>
-   </form>
-   
-   
+    <form method="get">
+        <label>Nome</label> <input type="text" name="name"> <br>
+        <label>Cargo</label>
+        <select name="role" multiple>
+            <!-- atributo multiple possibilita a escolhe de vários items dentro da opção select serve para escolhermos uma lista por exemplo-->
+            <option value="">Selecione o Cargo</option>
+            <option value="administrador">Administrador</option>
+            <option value="gerente ">Gerente</option>
+            <option value="diretor">Diretor</option>
+            <option value="presidente">Presidente</option>
+        </select> <br>
+        <label>Assunto</label> <input type="text" name="assunto"> <br>
+        <button type="reset">Limpar</button> <br>
+    </form>
 
+
+<h1><strong>TEXTAREA</strong></h1>
+<textarea name="" id="" cols="30" rows="10"></textarea>
 
 </body>
 
