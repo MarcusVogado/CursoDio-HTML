@@ -4,21 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabelas</title>    
+    <title>Tabelas</title>
+    <style>
+        table thead th {
+            background-color: black;
+            color: white;
+            text-align: center;
+
+        }
+
+        table tfoot {
+            background-color: lightgray;
+        }
+
+        table tbody tr:nth-child(even) td {
+            background-color: #ccc;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Tr table Row, Th Table Header  ,Td Table data cell-->
     <!-- thead cabeçalho da tabela, tbody corpo da tabela, tfoot roda pé da tablae, -->
-    <table border="1" width="250" cellspacing="15px" cellpadding="20">
+    <table width="250" cellpadding="5">
 
         <thead>
+            <tr>
+                <th colspan="2"> Minha Tablela</th>
+            </tr>
             <tr>
                 <th>Nome Completo</th>
                 <th>Idade</th>
             </tr>
         </thead>
-
         <tbody>
             <tr>
                 <td>Marcus</td>
@@ -41,13 +60,12 @@
                 <td>29</td>
             </tr>
         </tbody>
-<tfoot>
-<tr>
-    <td>Total</td>
-    <td>5</td>
-</tr>
-</tfoot>
-
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>5</td>
+            </tr>
+        </tfoot>
     </table>
 </body>
 
