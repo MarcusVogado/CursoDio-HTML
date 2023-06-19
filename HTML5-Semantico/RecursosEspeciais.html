@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Especiais</title>
+    <style>
+        kbd {
+            border: 1px solid black;
+        }
+
+        code {
+            background-color: aquamarine;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h3>DataList</h3>
+        <input list="browsers" type="search" name="search">
+        <datalist id="browsers">
+            <option value="">Selecione um Navegador</option>
+            <option>Google Chrome</option>
+            <option>Mozila Firefox</option>
+            <option>Microsoft Edge</option>
+            <option>Safari</option>
+            <option>Opera</option>
+        </datalist>
+        <hr>
+
+
+        <select name="browsers" id="">
+            <option value="">Selecione um Navegador</option>
+            <option value="chrome">Google Chrome</option>
+            <option value="firefox">Mozila Firefox</option>
+            <option value="edge">Microsoft Edge</option>
+            <option value="safari">Safari</option>
+            <option value="opera">Opera</option>
+        </select>
+    </section>
+    <hr>
+    <section>
+        <h3>Code, Kbd e pre</h3>
+
+        <p>Para copiar esta informação, precione <kbd>CTRL</kbd> + <kbd> C </kbd> </p>
+        <!-- kbd serve para adicionar outro tipo de fonte e separa-los para formatar atraves do css-->
+        <p>Para trocar o fundo de um elemento,utilize o comando <code>&lt;background-color&gt;</code> </p>
+
+        <p> Comando completo de alterar cor de fundo:</p>
+        <pre> code{
+            background-color: aquamarine;
+            font-family: sans-serif;
+        }</pre>
+        <!-- Mono Space- todas as letras ocupam o mesmo espaço-->
+    </section>
+    <hr>
+    <section>
+        <h3>Datails e Summary</h3>
+        <details>
+            <summary>Como trocar a cor de fundo de um elemento?</summary>
+            <p>Para executar esta ação, utilize comando <code>background-color</code> no CSS.</p>
+        </details>
+    </section>
+
+    <hr>
+    <section>
+        <h3>Meter e Progress</h3>
+        <meter></meter><!-- Serve para indentificar o valor de algo por exemplo o espaço ocupado no disco HD -->
+        <progress id="progress" min="0" max="100" value="0">
+        </progress><!--Serve para indentificar o progresso de alguma execução -->
+    </section>
+
+    <hr>
+    <section>
+        <h3>Mark e JavaScript</h3>
+        <input type="text" id="busca">
+        <p id="descricao"> Os nossos cursos e programas de formação são criados em conjunto com especialistas das
+            empresas mais inovadores do mundo, aplicando uma metodologia para que você domine as tecnologios utilizadas
+            no mercado e também mergulhe nas novas e mais atuais tecnologias que impactarão o futuro dos negócios
+            digitais </p>
+    </section>    
+</body>
+<script>
+    var searchFild = document.getElementById('busca');
+    var descriptionObject = document.getElementById('descricao');
+    var textToSearch = descriptionObject.innerHTML;
+
+    function searchText(busca) {
+        const regex = new RegExp(`(${busca})(?!(.(?!<mark))*</mark>)+`, 'ig');
+        const ocurrences = textToSearch.match(regex);
+        descriptionObject.innerHTML = textToSearch.replace(regex, `<mark>${busca}</mark>`)
+    }
+    searchFild.addEventListener('keyup',(e) => searchText(e.target.value));
+
+
+    var progress = document.getElementById('progress')
+    const interval = setInterval(() => {
+        progress.value += 10;
+        if (progress.value >= 100) {
+            // alert('Donwload Concluído com Sucesso')
+            clearInterval(interval);
+        }
+    }, 1000);
+</script>
+
+</html>
